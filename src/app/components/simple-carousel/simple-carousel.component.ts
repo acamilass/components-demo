@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CarouselInfo } from './interfaces/carousel-info.interface';
 
 @Component({
   selector: 'app-simple-carousel',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./simple-carousel.component.scss']
 })
 export class SimpleCarouselComponent implements OnInit {
+
+  @Input() carouselInfo: CarouselInfo[] = [];
 
   constructor() { }
 
