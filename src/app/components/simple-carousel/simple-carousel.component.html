@@ -1,3 +1,19 @@
 <div class="simple-carousel">
-    
+    <div class="carousel-header">
+        <div *ngFor="let info of carouselInfo; let i = index" class="header">
+            <i class="{{ info.icon }} icon" [ngClass]="{'icon-active' : i === currentSlide}"></i>
+            <span class="step-title" [ngClass]="{'step-title-active' : i === currentSlide}">{{ info.stepTitle }}</span>
+            <!-- <span class="step-divider"></span> -->
+        </div>
+    </div>
+    <div class="carousel-body" *ngFor="let info of carouselInfo; let i = index">
+        <ng-container *ngIf="i === currentSlide">
+            <h2>{{ info.cardTitle }}</h2>
+            <p>{{ info.cardText }}</p>
+        </ng-container>
+    </div>
+    <div class="carousel-ctrl">
+        <button (click)="goToPrevious()">Previous</button>
+        <button (click)="goToNext()">Next</button>
+    </div>
 </div>

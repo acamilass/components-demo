@@ -7,4 +7,46 @@
     background-color: #FFFCF9;
     border-radius: 5px;
     box-shadow: 5px 5px 17px 5px rgba(148,148,148,0.6);
+    padding: 20px;
+
+    .carousel-header {
+        display: flex;
+        justify-content: space-around;
+
+        .header {
+            display: inherit;
+            flex-direction: column;
+            align-items: center;
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                height: 45px;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            .step-title {
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            .icon-active {
+                width: 45px;
+                border-radius: 50%;
+                background-color: #ea1744;
+                color: #FFF;
+            }
+
+            .step-title-active {
+                color: #ea1744;
+            }
+
+            .step-divider {
+                border: 1px dashed #ea1744;
+            }
+        }
+    }
 }
